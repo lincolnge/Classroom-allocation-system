@@ -1,0 +1,101 @@
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form3.resources
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+c:\users\lincoln\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form3.resources
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form4.resources
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form5.resources
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form6.resources
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form7.resources
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form8.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form3.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form4.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form5.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form6.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form7.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form8.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\f030300043\My Documents\Downloads\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+F:\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+F:\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form3.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form4.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form5.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form6.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form7.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form8.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form9.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form3.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form4.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form5.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form6.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form7.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form8.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form9.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\360云盘\UIC\UICY2\Spring Semester\uicy2\WorkshopII\ForATM\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.login.resources
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.login_error.resources
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Zone.resources
+D:\360云盘\PROJECT\workshop_project\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.zone_A.resources
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.login.resources
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Zone.resources
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.login_error.resources
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.zone_A.resources
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\360云盘\PROJECT\workshop_project\doing\CAS\WindowsFormsApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
