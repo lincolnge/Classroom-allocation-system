@@ -40,11 +40,18 @@ namespace ReadExcil
                 comboBox2.Text = dt.Rows[k][5].ToString();
 
             }
+            /*
+            for (int k = 0; k < dt.Rows.Count; k++) {
+                if (comboBox1.Items[k].ToString() == comboBox1.Text.ToString())
+                    label2.Text = k.ToString();
+            }
+             */
+             comboBox2.Text = (comboBox1.SelectedIndex+1).ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)  // change information of excel
         {
-            Program.writeExcel(textBox1.Text.ToString(), textBox2.Text.ToString(), textBox3.Text.ToString(), textBox4.Text.ToString(), comboBox2.SelectedItem.ToString(), comboBox1.SelectedItem.ToString());
+            Program.writeExcel(textBox1.Text.ToString(), textBox2.Text.ToString(), textBox3.Text.ToString(), textBox4.Text.ToString(), comboBox2.SelectedItem.ToString(), comboBox1.SelectedIndex+1);
         }
 
         private void label1_Click(object sender, EventArgs e)

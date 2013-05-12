@@ -56,8 +56,9 @@ namespace ReadExcil
             return dt;
         }
 
-        static public void writeExcel(string teacher_name, string class_name, string room_name, string course_capacity, string Date_str, string course_name)
+        static public void writeExcel(string teacher_name, string class_name, string room_name, string course_capacity, string Date_str, int course_id)
         {
+            // int int_course_id = int.Parse(course_id);
             try
             {
                 System.Data.OleDb.OleDbConnection MyConnection;
@@ -72,7 +73,8 @@ namespace ReadExcil
                     "', [Room] = '" + room_name +
                     "', [Capacity] = '" + course_capacity +
                     "', [Date] = '" + Date_str +
-                    "' where [Name] = '" + course_name + "'";
+                    // "' where [Name] = '" + course_name + "'";
+                    "' where [id] = " + course_id;
                 myCommand.CommandText = sql;
                 myCommand.ExecuteNonQuery();
                 MyConnection.Close();
