@@ -21,12 +21,12 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new login());
-                        
-            string AmountNumber = "1111111111";
+            Application.Run(new login());
+            /*            
+            AmountNumber = "1111111111";
             string Password = "111111";
             Application.Run(new Zone(AmountNumber, Password));
-            /* * */
+            * */
         }
 
         static public DataTable readExcel() // 读取excel

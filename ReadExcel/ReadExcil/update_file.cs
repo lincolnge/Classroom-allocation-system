@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace ReadExcil
 {
-    static class Program
+    public class update_file
     {
         static void Main(string[] args)
         {

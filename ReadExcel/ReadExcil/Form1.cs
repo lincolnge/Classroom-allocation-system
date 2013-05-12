@@ -17,13 +17,11 @@ namespace ReadExcil
         public Form1()
         {
             InitializeComponent();
-        }
-
- 
+        } 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataTable dt = Program.readExcel();
+            DataTable dt = update_file.readExcel();
             label1.Text = dt.Rows[3][0].ToString(); // 读取第4行 第1列
             string[] sArray;
             for (int k = 0; k < dt.Rows.Count; k++)
@@ -35,7 +33,6 @@ namespace ReadExcil
                 textBox2.Text = dt.Rows[k][2].ToString();
                 textBox3.Text = dt.Rows[k][3].ToString();
                 textBox4.Text = dt.Rows[k][4].ToString();
-
 
                 sArray = dt.Rows[k][5].ToString().Split(new char[2] { ' ', '-' });
                 comboBox3.Text = sArray[0];
@@ -57,7 +54,7 @@ namespace ReadExcil
         private void button1_Click(object sender, EventArgs e)  // change information of excel
         {
             string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
-            Program.writeExcel(textBox1.Text.ToString(), textBox2.Text.ToString(), textBox3.Text.ToString(), textBox4.Text.ToString(), date_str, comboBox1.SelectedIndex+1);
+            update_file.writeExcel(textBox1.Text.ToString(), textBox2.Text.ToString(), textBox3.Text.ToString(), textBox4.Text.ToString(), date_str, comboBox1.SelectedIndex+1);
         }
 
         private void label1_Click(object sender, EventArgs e)
