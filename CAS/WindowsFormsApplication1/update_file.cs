@@ -9,27 +9,12 @@ using System.Data.OleDb;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Diagnostics;
 
+
 namespace WindowsFormsApplication1
 {
-    static class Program
+    public class update_file
     {
-        /// <summary>
-        /// 应用程序的主入口点。
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new login());
-                      
-            string AmountNumber = "1111111111";
-            string Password = "111111";
-            Application.Run(new Zone(AmountNumber, Password));
-            /*  * */
-        }
-
-        static public DataTable readExcel() // 读取excel
+        static public DataTable readExcel()
         {
             string filename = "timetable.xls";
             string strCon = " Provider = Microsoft.Jet.OLEDB.4.0 ; Data Source = " + filename + ";Extended Properties=Excel 8.0";
@@ -53,7 +38,6 @@ namespace WindowsFormsApplication1
             return dt;
         }
 
-        // 写入excel
         static public void writeExcel(string teacher_name, string class_name, string room_name, string course_capacity, string Date_str, int course_id)
         {
             // int int_course_id = int.Parse(course_id);

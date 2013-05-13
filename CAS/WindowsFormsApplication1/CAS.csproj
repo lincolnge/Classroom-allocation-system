@@ -51,12 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classroom.Designer.cs">
+      <DependentUpon>Classroom.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="update_file.cs" />
     <Compile Include="Zone.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +84,9 @@
     <Compile Include="zone_A.Designer.cs">
       <DependentUpon>zone_A.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Classroom.resx">
+      <DependentUpon>Classroom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
