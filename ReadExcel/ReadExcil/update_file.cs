@@ -84,5 +84,34 @@ namespace ReadExcil
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        static public DataTable readExcelSql(string sql_select)
+        {
+            try
+            {
+                string filename = "timetable.xls";
+                string strCon = " Provider = Microsoft.Jet.OLEDB.4.0 ; Data Source = " + filename + ";Extended Properties=Excel 8.0";
+                OleDbConnection conn = new OleDbConnection(strCon);
+                conn.Open();
+                //返回Excel的架构，包括各个sheet表的名称,类型，创建时间和修改时间等　
+                DataTable dtSheetName = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" });
+                //包含excel中表名的字符串数组
+                OleDbDataAdapter myCommand = null;
+                DataTable dt = new DataTable();
+                //从指定的表明查询数据,可先把所有表明列出来供用户选择
+                string strExcel = sql_select;
+                // string strExcel = "select * from [21 DEC 2012$] where [Date] = 'Fri 10:00-11:50' and [Room] = 'null'";
+                // string strExcel = "select * from [Date] where [Date] = [" + Date_str + "] and [Room] = " + Classroom_str + "]";
+                myCommand = new OleDbDataAdapter(strExcel, strCon);
+                myCommand.Fill(dt);
+
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
     }
 }

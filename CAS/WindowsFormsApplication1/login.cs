@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1
                 string p;
                 p = node.ParentNode.ChildNodes[1].InnerText;
                 a = int.Parse(p);//字符串转数字
-                a -= 333333;
+                a = ( a + 1024 ) / 256;
                 p = a.ToString();
 
                 if (node.ParentNode.ChildNodes[0].InnerText == textBox.Text && textBox2.Text == p)

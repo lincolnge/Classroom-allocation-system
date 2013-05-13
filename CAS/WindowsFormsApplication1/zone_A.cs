@@ -35,8 +35,7 @@ namespace WindowsFormsApplication1
         private void zone_A_Load(object sender, EventArgs e)
         {
             label1.Text = zone_name_init + "-Zone";
-
-
+            
             string[] sArray;
             sArray = "Mon 8:00-8:50".Split(new char[2] { ' ', '-' });
             comboBox3.Text = sArray[0];

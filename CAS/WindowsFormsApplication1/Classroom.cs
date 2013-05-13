@@ -36,7 +36,13 @@ namespace WindowsFormsApplication1
         {
             label1.Text = classroom_name_One_init;
 
-            DataTable dt = Program.readExcel();
+            string[] sArray;
+            sArray = date_str_init.Split(new char[2] { ' ', '-' });
+            comboBox3.Text = sArray[0];
+            comboBox4.Text = sArray[1];
+            comboBox5.Text = sArray[2]; 
+
+            DataTable dt = update_file.readExcel();
             for (int k = 0; k < dt.Rows.Count; k++)
             {
                 comboBox1.Items.Add(dt.Rows[k][0]);
@@ -49,12 +55,13 @@ namespace WindowsFormsApplication1
                     textBox3.Text = dt.Rows[k][3].ToString();
                     textBox4.Text = dt.Rows[k][4].ToString();
 
-                    label2.Text = date_str_init;
+                    // label2.Text = date_str_init;
                     break;
                 }
                 else
                 {
-                    label2.Text = "There is no course on " + date_str_init;
+                    // label2.Text = "There is no course on " + date_str_init;
+                    label2.Text = "There is no course";
                 }
             }
         }
@@ -66,7 +73,73 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.writeExcel(textBox1.Text.ToString(), textBox2.Text.ToString(), textBox3.Text.ToString(), textBox4.Text.ToString(), label2.Text.ToString(), comboBox1.SelectedIndex + 1);
+            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            update_file.writeExcel(textBox1.Text.ToString(), textBox2.Text.ToString(), textBox3.Text.ToString(), textBox4.Text.ToString(), date_str, comboBox1.SelectedIndex + 1);
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            try
+            {
+                string sql_select = "select * from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
+                // string sql_select = "select * from [21 DEC 2012$] where [Date] = 'Tue 17:00-17:50' and [Room] = '" + label1.Text + "'";
+                DataTable dt = update_file.readExcelSql(sql_select);
+
+                label3.Text = dt.Rows[0][0].ToString() + "\n\n" +
+                    dt.Rows[0][1].ToString() + "\n\n" +
+                    dt.Rows[0][2].ToString() + "\n\n" +
+                    dt.Rows[0][3].ToString() + "\n\n" +
+                    dt.Rows[0][4].ToString();
+                comboBox1.Text = dt.Rows[0][0].ToString();
+            }
+            catch
+            {
+                label3.Text = "There is no classroom!";
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)  // transfer
+        {
+            /*
+            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            try
+            {
+                string sql_select = "select * from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
+                DataTable dt = update_file.readExcelSql(sql_select);
+
+                label2.Text = dt.Rows[0][0].ToString();
+                comboBox1.Text = dt.Rows[0][0].ToString();
+                textBox1.Text = dt.Rows[0][1].ToString();
+                textBox2.Text = dt.Rows[0][2].ToString();
+                textBox3.Text = dt.Rows[0][3].ToString();
+                textBox4.Text = dt.Rows[0][4].ToString();
+            }
+            catch
+            {
+
+            }
+             */
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

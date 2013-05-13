@@ -22,7 +22,8 @@ namespace ReadExcil
         private void Form1_Load(object sender, EventArgs e)
         {
             DataTable dt = update_file.readExcel();
-            label1.Text = dt.Rows[3][0].ToString(); // 读取第4行 第1列
+            
+            // label1.Text = dt.Rows[3][0].ToString(); // 读取第4行 第1列
             string[] sArray;
             for (int k = 0; k < dt.Rows.Count; k++)
             {
@@ -49,6 +50,11 @@ namespace ReadExcil
             }
              */
              // comboBox2.Text = (comboBox1.SelectedIndex+1).ToString();
+
+            // 以下句子直接操作数据库
+            string sql_select = "select * from [21 DEC 2012$] where [Date] = 'Fri 10:00-11:50' and [Room] = 'E208B'";
+            DataTable datesql = update_file.readExcelSql(sql_select);
+            label3.Text = datesql.Rows[0][0].ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)  // change information of excel
@@ -80,6 +86,29 @@ namespace ReadExcil
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            DataTable dt = update_file.readExcel();
+
+            int k = comboBox1.SelectedIndex;
+            label2.Text = dt.Rows[k][0].ToString();
+            string[] sArray;
+            textBox1.Text = dt.Rows[k][1].ToString();
+            textBox2.Text = dt.Rows[k][2].ToString();
+            textBox3.Text = dt.Rows[k][3].ToString();
+            textBox4.Text = dt.Rows[k][4].ToString();
+
+            sArray = dt.Rows[k][5].ToString().Split(new char[2] { ' ', '-' });
+            comboBox3.Text = sArray[0];
+            comboBox4.Text = sArray[1];
+            comboBox5.Text = sArray[2];
         }
     }
 }
