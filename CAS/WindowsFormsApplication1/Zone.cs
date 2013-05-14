@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            output_txt.output_textfile();   // This is a sample output text file
         }
 
         private void button6_Click(object sender, EventArgs e)  // zone_A

@@ -63,6 +63,7 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="output_txt.cs" />
     <Compile Include="update_file.cs" />
     <Compile Include="Zone.cs">
       <SubType>Form</SubType>
