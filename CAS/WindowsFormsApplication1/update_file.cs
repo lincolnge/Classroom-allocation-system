@@ -68,6 +68,7 @@ namespace WindowsFormsApplication1
             }
         }
 
+        // read content from excel with sql 
         static public DataTable readExcelSql(string sql_select)
         {
             try
@@ -83,11 +84,15 @@ namespace WindowsFormsApplication1
                 DataTable dt = new DataTable();
                 //从指定的表明查询数据,可先把所有表明列出来供用户选择
                 string strExcel = sql_select;
-                // string strExcel = "select * from [21 DEC 2012$] where [Date] = 'Fri 10:00-11:50' and [Room] = 'null'";
-                // string strExcel = "select * from [Date] where [Date] = [" + Date_str + "] and [Room] = " + Classroom_str + "]";
+                // string strExcel = "select * from [21 DEC 2012$] where [Date] = 'Fri 10:00-11:50' and [Room] = 'null'";   // select 亲测成功
+                // string strExcel = "select * from [21 DEC 2012$] where [Date] = [" + Date_str + "] and [Room] = " + Classroom_str + "]";
+                // strExcel = "Insert into [21 DEC 2012$] (Name, Teachers, Classes, Room, Capacity, Date, id) values('SDF', 'SDF', 'SDF', 'SDF', 'SDF', 'SDF', '700')";
+                // strExcel = "Update [21 DEC 2012$] set Teachers = 3 where id = 1"; // update 亲测成功
+                // strExcel = "Delete [21 DEC 2012$] where id = 1";
+                // strExcel = "Insert into [Sheet1$] (id,name) values('5','e')";
                 myCommand = new OleDbDataAdapter(strExcel, strCon);
                 myCommand.Fill(dt);
-
+                // conn.Close();
                 return dt;
             }
             catch

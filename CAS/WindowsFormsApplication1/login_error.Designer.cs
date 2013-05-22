@@ -98,11 +98,12 @@
             this.ClientSize = new System.Drawing.Size(926, 666);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "login_error";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form9";
+            this.Text = "login_error";
             this.Load += new System.EventHandler(this.Form9_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

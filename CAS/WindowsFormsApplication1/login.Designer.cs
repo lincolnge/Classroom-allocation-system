@@ -34,10 +34,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Enterbutton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.exit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -109,18 +109,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // exit
-            // 
-            this.exit.BackColor = System.Drawing.Color.Blue;
-            this.exit.ForeColor = System.Drawing.Color.White;
-            this.exit.Location = new System.Drawing.Point(134, 117);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(59, 30);
-            this.exit.TabIndex = 6;
-            this.exit.Text = "EXIT";
-            this.exit.UseVisualStyleBackColor = false;
-            this.exit.Click += new System.EventHandler(this.button1_Click_2);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -156,6 +144,18 @@
             this.panel2.Size = new System.Drawing.Size(316, 178);
             this.panel2.TabIndex = 7;
             // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.Blue;
+            this.exit.ForeColor = System.Drawing.Color.White;
+            this.exit.Location = new System.Drawing.Point(134, 117);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(59, 30);
+            this.exit.TabIndex = 6;
+            this.exit.Text = "EXIT";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -164,11 +164,12 @@
             this.ClientSize = new System.Drawing.Size(926, 666);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -185,10 +186,10 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button Enterbutton;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button exit;
     }
 }
 

@@ -21,8 +21,8 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new login());
-                     
+            Application.Run(new login());
+            /*
             string AmountNumber = "1111111111";
             string Password = "111111";
             Application.Run(new Zone(AmountNumber, Password));

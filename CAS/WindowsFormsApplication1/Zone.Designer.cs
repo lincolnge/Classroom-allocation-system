@@ -35,6 +35,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button5
@@ -109,6 +110,18 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.Blue;
+            this.exit.ForeColor = System.Drawing.Color.White;
+            this.exit.Location = new System.Drawing.Point(748, 618);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(59, 30);
+            this.exit.TabIndex = 15;
+            this.exit.Text = "EXIT";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // Zone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -116,6 +129,7 @@
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.UIC2;
             this.ClientSize = new System.Drawing.Size(926, 666);
             this.ControlBox = false;
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -123,6 +137,7 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.zone_A);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Zone";
@@ -142,5 +157,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button exit;
     }
 }

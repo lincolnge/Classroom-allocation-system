@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            output_txt.output_textfile();   // This is a sample output text file
+            // output_txt.output_textfile();   // This is a sample output text file
         }
 
         private void button6_Click(object sender, EventArgs e)  // zone_A
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
             string[] classroom_name;
             classroom_name = new string[50];
 
-            classroom_name[0] = "There is not classroom!!!";
+            classroom_name[0] = "!!!";
 
             zone_A zoneA = new zone_A(zone_name, classroom_name);
             this.Hide();
@@ -171,6 +171,12 @@ namespace WindowsFormsApplication1
             zone_A zoneA = new zone_A(zone_name, classroom_name);
             this.Hide();
             zoneA.ShowDialog();
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();   // Turn off the current form
+            Application.ExitThread();   // exit all of the form
         }
     }
 }
