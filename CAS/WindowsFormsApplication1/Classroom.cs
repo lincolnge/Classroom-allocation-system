@@ -153,9 +153,10 @@ namespace WindowsFormsApplication1
         
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            //string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
             try
             {
+                /*
                 string sql_select = "select * from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
                 DataTable dt = update_file.readExcelSql(sql_select);
 
@@ -165,6 +166,8 @@ namespace WindowsFormsApplication1
                     dt.Rows[0][3].ToString() + "\n\n" +
                     dt.Rows[0][4].ToString();
                 comboBox1.Text = dt.Rows[0][0].ToString();
+                 * */
+                showclassroom();
             }
             catch
             {
@@ -240,12 +243,17 @@ namespace WindowsFormsApplication1
                 // string sql_select = "select * from [21 DEC 2012$] where [Date] = 'Tue 17:00-17:50' and [Room] = '" + label1.Text + "'";
                 DataTable dt = update_file.readExcelSql(sql_select);
 
-                label3.Text = dt.Rows[0][0].ToString() + "\n\n" +
-                    dt.Rows[0][1].ToString() + "\n\n" +
-                    dt.Rows[0][2].ToString() + "\n\n" +
-                    dt.Rows[0][3].ToString() + "\n\n" +
+                label3.Text = dt.Rows[0][0].ToString() + "\n\n\n" +
+                    dt.Rows[0][1].ToString() + "\n\n\n" +
+                    dt.Rows[0][2].ToString() + "\n\n\n" +
+                    dt.Rows[0][3].ToString() + "\n\n\n" +
                     dt.Rows[0][4].ToString();
                 comboBox1.Text = dt.Rows[0][0].ToString();
+
+                textBox1.Text = dt.Rows[0][1].ToString();
+                textBox2.Text = dt.Rows[0][2].ToString();
+                textBox3.Text = dt.Rows[0][3].ToString();
+                textBox4.Text = dt.Rows[0][4].ToString();
             }
             catch
             {
