@@ -56,33 +56,8 @@ namespace WindowsFormsApplication1
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            /*
-            int _Height = 100;
-            int _Width = 20;
-            for (int i = 0; i < 50; i++)
-            {
-                Label label = new Label();
-
-                label.AutoSize = true;
-                label.Location = new Point(_Width, _Height);
-                _Width += label.Width;
-                if (i % 10 == 0)
-                {
-                    _Width = 20;
-                    _Height += label.Height;
-                }
-                if (classroom_name_init[i]!=null)
-                {
-                    label.Text = zone_name_init + classroom_name_init[i];
-                }                
-                Controls.Add(label);
-                label.Parent = panel1;        
-            }
-             */
-            
+        {            
             panel1.SendToBack();//置于底层
-
         }
 
         void Buttons_Click(object sender, EventArgs e)
@@ -117,28 +92,8 @@ namespace WindowsFormsApplication1
 
         private void showclassroom()
         {
-            //string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
-            //label2.Text = date_str;
-            //DataTable dt;
             try
             {
-                //string sql_select;
-                //string sql_select = "select [Name] from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + buttons[i].Text.ToString() + "'";
-                //string sql_select = "select [Name] from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = 'B201'";
-                //DataTable dt = update_file.readExcelSql(sql_select);
-                                                
-                //string sql_select = "select * from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
-                //DataTable dt = update_file.readExcelSql(sql_select);
-                /*
-                label3.Text = dt.Rows[0][0].ToString() + "\n\n" +
-                    dt.Rows[0][1].ToString() + "\n\n" +
-                    dt.Rows[0][2].ToString() + "\n\n" +
-                    dt.Rows[0][3].ToString() + "\n\n" +
-                    dt.Rows[0][4].ToString();
-                comboBox1.Text = dt.Rows[0][0].ToString();*/
-
-                //date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
-
                 Button[] buttons = new Button[50];
                 // for (int i = 0; i < 5; i++) // 只产生5个button
                 for (int i = 0; i < classroom_name_init.Length; i++)
@@ -156,28 +111,7 @@ namespace WindowsFormsApplication1
 
                         //panel1.Controls.Add(buttons[i]);
                         buttons[i].BringToFront();//置于顶层
-                        buttons[i].Click += new EventHandler(Buttons_Click);
-                        //buttons[i].BackColor = SystemColors.Control;
-
-                        //string sql_select = "select [Name] from [21 DEC 2012$] where [Date] = 'Wed 13:00-13:50' and [Room] '" + zone_name_init + classroom_name_init[i] + "'";
-                        //DataTable dt = update_file.readExcelSql(sql_select);
-                        /*
-                        sql_select = "select [Name] from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] '" + buttons[i].Text + "'";
-                        dt = update_file.readExcelSql(sql_select);
-                        label1.Text = dt.Rows[0][0].ToString();
-                        */
-                        /*
-                        //if (dt.Rows[0][0].ToString() != "hehe")
-                        if (i%2 == 0)
-                        {
-                            buttons[i].BackColor = Color.Red;
-                        }
-                        else
-                        {
-                            buttons[i].BackColor = Color.Gray;
-                        }
-                         * */
-                        
+                        buttons[i].Click += new EventHandler(Buttons_Click);                        
                     }
                     else
                     {

@@ -121,9 +121,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\atm3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\UIC.jpg" />
   </ItemGroup>
   <ItemGroup>

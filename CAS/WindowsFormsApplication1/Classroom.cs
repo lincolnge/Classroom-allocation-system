@@ -88,37 +88,16 @@ namespace WindowsFormsApplication1
                 if (MessageBox.Show("Change Classroom Information...?", "Comfirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     // code here
-                    // string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
-                    // update_file.writeExcel(textBox1.Text.ToString(), textBox2.Text.ToString(), textBox3.Text.ToString(), textBox4.Text.ToString(), date_str, comboBox1.SelectedIndex + 1);
-
                     string sql_select = "Update [21 DEC 2012$] set Teachers = '" + textBox1.Text.ToString() +
                         "', [Classes] = '" + textBox2.Text.ToString() +
                         "', [Room] = '" + textBox3.Text.ToString() +
                         "', [Capacity] = '" + textBox4.Text.ToString() +
-                        // "', [Date] = '" + Date_str +
                         "', [Name] = '" + comboBox1.Text.ToString() +
                         "' where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
-
-                    // string sql_select = "update * from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
+                    
                     DataTable dt = update_file.readExcelSql(sql_select);
 
                     // memo part
-                    /*
-                    FileStream fs = new FileStream("memo.txt", FileMode.Append);
-                    StreamWriter sw = new StreamWriter(fs);
-
-                    sw.WriteLine(System.DateTime.Now);
-                    sw.WriteLine("change classroom information");
-                    sw.WriteLine("Date" + " : " + date_str, true);
-                    sw.WriteLine("CourseName" + " : " + comboBox1.Text, true);
-                    sw.WriteLine("TeacherName" + " : " + textBox1.Text, true);
-                    sw.WriteLine("ClassName" + " : " + textBox2.Text, true);
-                    sw.WriteLine("RoomName" + " : " + textBox3.Text, true);
-                    sw.WriteLine("Capacity" + " : " + textBox4.Text, true);
-                    sw.WriteLine("===========");
-                    sw.Close();
-                    fs.Close();
-                     */
                     string content = "Date" + " : " + date_str + " \n" +
                         "CourseName" + " : " + comboBox1.Text + " \n" +
                         "TeacherName" + " : " + textBox1.Text + " \n" +
@@ -159,22 +138,6 @@ namespace WindowsFormsApplication1
                         DataTable dt = update_file.readExcelSql(sql_select);
 
                         // memo part
-                        /*
-                        FileStream fs = new FileStream("memo.txt", FileMode.Append);
-                        StreamWriter sw = new StreamWriter(fs);
-
-                        sw.WriteLine(System.DateTime.Now);
-                        sw.WriteLine("add classroom information");
-                        sw.WriteLine("Date" + " : " + date_str, true);
-                        sw.WriteLine("CourseName" + " : " + comboBox1.Text, true);
-                        sw.WriteLine("TeacherName" + " : " + textBox1.Text, true);
-                        sw.WriteLine("ClassName" + " : " + textBox2.Text, true);
-                        sw.WriteLine("RoomName" + " : " + textBox3.Text, true);
-                        sw.WriteLine("Capacity" + " : " + textBox4.Text, true);
-                        sw.WriteLine("===========");
-                        sw.Close();
-                        fs.Close();
-                        */
                         string content = "Date" + " : " + date_str + " \n" +
                         "CourseName" + " : " + comboBox1.Text + " \n" +
                         "TeacherName" + " : " + textBox1.Text + " \n" +
@@ -185,7 +148,6 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-            //MessageBox.Show("Done!");
             showclassroom();
         }
         
@@ -195,7 +157,6 @@ namespace WindowsFormsApplication1
             try
             {
                 string sql_select = "select * from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
-                // string sql_select = "select * from [21 DEC 2012$] where [Date] = 'Tue 17:00-17:50' and [Room] = '" + label1.Text + "'";
                 DataTable dt = update_file.readExcelSql(sql_select);
 
                 label3.Text = dt.Rows[0][0].ToString() + "\n\n" +
@@ -229,13 +190,10 @@ namespace WindowsFormsApplication1
         private void button2_Click_1(object sender, EventArgs e) // remove 
         {
             string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
-            // string sql_delte = "delete from [21 DEC 2012$] where [id] = 1";
-            // string sql_select = "select * from [21 DEC 2012$] where [Date] = 'Tue 17:00-17:50' and [Room] = '" + label1.Text + "'";
-            // DataTable dt = update_file.readExcelSql(sql_delte);
             if (MessageBox.Show("Deleting...?", "Comfirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 // code here
-
+                // 貌似可行
                 string sql_select = "Update [21 DEC 2012$] set Teachers = '" + "" +
                         "', [Classes] = '" + "" +
                         "', [Room] = '" + "" +
@@ -244,33 +202,9 @@ namespace WindowsFormsApplication1
                         "', [Name] = '" + "" +
                         "' where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
 
-                // 貌似可行
-                /*
-                sql_select = "Update [21 DEC 2012$] set Teachers = '" + "" +
-                        "', [Classes] = '" + "" +
-                        "', [Room] = '" + "" +
-                        "', [Capacity] = '" + 0 + // capacity 要有值就行！
-                        "', [Date] = '" + "" +
-                        "', [Name] = '" + "" +
-                        //"' where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
-                        "' where [id] = 683";
-                 */
                 DataTable dt = update_file.readExcelSql(sql_select);
-                // update_file.writeExcel("", "", "", "", date_str, 683);
                 
                 // memo part
-                /*
-                FileStream fs = new FileStream("memo.txt", FileMode.Append);
-                StreamWriter sw = new StreamWriter(fs);
-
-                sw.WriteLine(System.DateTime.Now);  // show now DateTime
-                sw.WriteLine("delete classroom information");
-                sw.WriteLine(label3.Text, true);
-                sw.WriteLine("===========");
-                sw.Close();
-                fs.Close();
-                MessageBox.Show("Done!");
-                */
                 output_txt.output_textfile(label3.Text, "delete");
             }
             showclassroom();
