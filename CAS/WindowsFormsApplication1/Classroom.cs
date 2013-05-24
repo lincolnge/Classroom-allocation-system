@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
         {
             label1.Text = classroom_name_One_init;
             textBox3.Text = label1.Text;
-
+            
             string[] sArray;
             sArray = date_str_init.Split(new char[2] { ' ', '-' });
             comboBox3.Text = sArray[0];
@@ -48,23 +48,26 @@ namespace WindowsFormsApplication1
             for (int k = 0; k < dt.Rows.Count; k++)
             {
                 comboBox1.Items.Add(dt.Rows[k][0]);
-                if (date_str_init == dt.Rows[k][5].ToString() && classroom_name_One_init == dt.Rows[k][3].ToString())
+                try
                 {
-                    comboBox1.Text = dt.Rows[k][0].ToString();
+                    if (date_str_init == dt.Rows[k][5].ToString() && classroom_name_One_init == dt.Rows[k][3].ToString())
+                    {
+                        comboBox1.Text = dt.Rows[k][0].ToString();
 
-                    textBox1.Text = dt.Rows[k][1].ToString();
-                    textBox2.Text = dt.Rows[k][2].ToString();
-                    textBox3.Text = dt.Rows[k][3].ToString();
-                    textBox4.Text = dt.Rows[k][4].ToString();
+                        textBox1.Text = dt.Rows[k][1].ToString();
+                        textBox2.Text = dt.Rows[k][2].ToString();
+                        textBox3.Text = dt.Rows[k][3].ToString();
+                        textBox4.Text = dt.Rows[k][4].ToString();
 
-                    // label2.Text = date_str_init;
-                    break;
+                        break;
+                    }
+                    else
+                    {
+
+                    }
                 }
-                else
+                catch
                 {
-                    // label2.Text = "There is no course on " + date_str_init;
-                    // label2.Text = "There is no course";
-                    label2.Text = "";
                 }
              
             }
@@ -77,7 +80,7 @@ namespace WindowsFormsApplication1
         }
 
         // This is a comfirm button, if label3 has no course, it means adding course, if labels3 has course, it means change course information
-        private void button1_Click(object sender, EventArgs e)  
+        private void button1_Click(object sender, EventArgs e)  // add or change
         {
             string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
             if (label3.Text != "There is no classroom!" && label3.Text != "" && label3.Text != "label3")
@@ -100,6 +103,7 @@ namespace WindowsFormsApplication1
                     DataTable dt = update_file.readExcelSql(sql_select);
 
                     // memo part
+                    /*
                     FileStream fs = new FileStream("memo.txt", FileMode.Append);
                     StreamWriter sw = new StreamWriter(fs);
 
@@ -114,6 +118,14 @@ namespace WindowsFormsApplication1
                     sw.WriteLine("===========");
                     sw.Close();
                     fs.Close();
+                     */
+                    string content = "Date" + " : " + date_str + " \n" +
+                        "CourseName" + " : " + comboBox1.Text + " \n" +
+                        "TeacherName" + " : " + textBox1.Text + " \n" +
+                        "ClassName" + " : " + textBox2.Text + " \n" +
+                        "RoomName" + " : " + textBox3.Text + " \n" +
+                        "Capacity" + " : " + textBox4.Text; 
+                    output_txt.output_textfile(content, "change");
                 }
             }
             else
@@ -147,6 +159,7 @@ namespace WindowsFormsApplication1
                         DataTable dt = update_file.readExcelSql(sql_select);
 
                         // memo part
+                        /*
                         FileStream fs = new FileStream("memo.txt", FileMode.Append);
                         StreamWriter sw = new StreamWriter(fs);
 
@@ -161,18 +174,21 @@ namespace WindowsFormsApplication1
                         sw.WriteLine("===========");
                         sw.Close();
                         fs.Close();
+                        */
+                        string content = "Date" + " : " + date_str + " \n" +
+                        "CourseName" + " : " + comboBox1.Text + " \n" +
+                        "TeacherName" + " : " + textBox1.Text + " \n" +
+                        "ClassName" + " : " + textBox2.Text + " \n" +
+                        "RoomName" + " : " + textBox3.Text + " \n" +
+                        "Capacity" + " : " + textBox4.Text;
+                        output_txt.output_textfile(content, "add");
                     }
                 }
             }
-            MessageBox.Show("Done!");
+            //MessageBox.Show("Done!");
             showclassroom();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
@@ -199,30 +215,7 @@ namespace WindowsFormsApplication1
         {
 
         }
-
-        private void button2_Click(object sender, EventArgs e)  // transfer
-        {
-            /*
-            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
-            try
-            {
-                string sql_select = "select * from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + label1.Text + "'";
-                DataTable dt = update_file.readExcelSql(sql_select);
-
-                label2.Text = dt.Rows[0][0].ToString();
-                comboBox1.Text = dt.Rows[0][0].ToString();
-                textBox1.Text = dt.Rows[0][1].ToString();
-                textBox2.Text = dt.Rows[0][2].ToString();
-                textBox3.Text = dt.Rows[0][3].ToString();
-                textBox4.Text = dt.Rows[0][4].ToString();
-            }
-            catch
-            {
-
-            }
-             */
-        }
-
+        
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -233,7 +226,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e) // remove 
         {
             string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
             // string sql_delte = "delete from [21 DEC 2012$] where [id] = 1";
@@ -266,6 +259,7 @@ namespace WindowsFormsApplication1
                 // update_file.writeExcel("", "", "", "", date_str, 683);
                 
                 // memo part
+                /*
                 FileStream fs = new FileStream("memo.txt", FileMode.Append);
                 StreamWriter sw = new StreamWriter(fs);
 
@@ -276,6 +270,8 @@ namespace WindowsFormsApplication1
                 sw.Close();
                 fs.Close();
                 MessageBox.Show("Done!");
+                */
+                output_txt.output_textfile(label3.Text, "delete");
             }
             showclassroom();
         }

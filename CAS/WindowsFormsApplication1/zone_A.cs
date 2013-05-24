@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
         private string zone_name_init;
         private string[] classroom_name_init;
 
-        private string date_str;
+        public string date_str;
         //private string label;
         private string AmountNumber;
         private string Password;
@@ -87,6 +87,7 @@ namespace WindowsFormsApplication1
 
         void Buttons_Click(object sender, EventArgs e)
         {
+            date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
             this.Text = (sender as Button).Text;
             Classroom classroom = new Classroom(zone_name_init, classroom_name_init, this.Text, date_str);
             this.Hide();
@@ -116,9 +117,12 @@ namespace WindowsFormsApplication1
 
         private void showclassroom()
         {
-            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            //string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            //label2.Text = date_str;
+            //DataTable dt;
             try
             {
+                //string sql_select;
                 //string sql_select = "select [Name] from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = '" + buttons[i].Text.ToString() + "'";
                 //string sql_select = "select [Name] from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] = 'B201'";
                 //DataTable dt = update_file.readExcelSql(sql_select);
@@ -133,7 +137,7 @@ namespace WindowsFormsApplication1
                     dt.Rows[0][4].ToString();
                 comboBox1.Text = dt.Rows[0][0].ToString();*/
 
-                date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+                //date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
 
                 Button[] buttons = new Button[50];
                 // for (int i = 0; i < 5; i++) // 只产生5个button
@@ -158,7 +162,13 @@ namespace WindowsFormsApplication1
                         //string sql_select = "select [Name] from [21 DEC 2012$] where [Date] = 'Wed 13:00-13:50' and [Room] '" + zone_name_init + classroom_name_init[i] + "'";
                         //DataTable dt = update_file.readExcelSql(sql_select);
                         /*
-                        if (dt.Rows[0][0].ToString() != "")
+                        sql_select = "select [Name] from [21 DEC 2012$] where [Date] = '" + date_str + "' and [Room] '" + buttons[i].Text + "'";
+                        dt = update_file.readExcelSql(sql_select);
+                        label1.Text = dt.Rows[0][0].ToString();
+                        */
+                        /*
+                        //if (dt.Rows[0][0].ToString() != "hehe")
+                        if (i%2 == 0)
                         {
                             buttons[i].BackColor = Color.Red;
                         }
@@ -166,7 +176,8 @@ namespace WindowsFormsApplication1
                         {
                             buttons[i].BackColor = Color.Gray;
                         }
-                        */
+                         * */
+                        
                     }
                     else
                     {
