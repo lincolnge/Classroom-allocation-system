@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            zone_A Zone = new zone_A(zone_name_init, classroom_name_init);
+            zone_A Zone = new zone_A(zone_name_init, classroom_name_init, date_str_init);
             this.Hide();
             Zone.ShowDialog();
         }
@@ -45,16 +45,33 @@ namespace WindowsFormsApplication1
             comboBox5.Text = sArray[2];
             
             DataTable dt = update_file.readExcel();
+
+            string sql_select = "select distinct [Name] from [21 DEC 2012$] order by [Name]";
+            DataTable dt2 = update_file.readExcelSql(sql_select);
+
+            for (int k = 0; k < dt2.Rows.Count; k++)
+            {
+                comboBox1.Items.Add(dt2.Rows[k][0]);
+            }
+            sql_select = "select distinct [Teachers] from [21 DEC 2012$] order by [Teachers]";
+            dt2 = update_file.readExcelSql(sql_select);
+            for (int k = 0; k < dt2.Rows.Count; k++)
+            {
+                comboBox2.Items.Add(dt2.Rows[k][0]);
+            }
+
+            /*
             for (int k = 0; k < dt.Rows.Count; k++)
             {
                 comboBox1.Items.Add(dt.Rows[k][0]);
+                comboBox2.Items.Add(dt.Rows[k][1]);
                 try
                 {
                     if (date_str_init == dt.Rows[k][5].ToString() && classroom_name_One_init == dt.Rows[k][3].ToString())
                     {
                         comboBox1.Text = dt.Rows[k][0].ToString();
 
-                        textBox1.Text = dt.Rows[k][1].ToString();
+                        comboBox2.Text = dt.Rows[k][1].ToString();
                         textBox2.Text = dt.Rows[k][2].ToString();
                         textBox3.Text = dt.Rows[k][3].ToString();
                         textBox4.Text = dt.Rows[k][4].ToString();
@@ -71,6 +88,7 @@ namespace WindowsFormsApplication1
                 }
              
             }
+             */
             
         }
 
@@ -88,7 +106,7 @@ namespace WindowsFormsApplication1
                 if (MessageBox.Show("Change Classroom Information...?", "Comfirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     // code here
-                    string sql_select = "Update [21 DEC 2012$] set Teachers = '" + textBox1.Text.ToString() +
+                    string sql_select = "Update [21 DEC 2012$] set Teachers = '" + comboBox2.Text.ToString() +
                         "', [Classes] = '" + textBox2.Text.ToString() +
                         "', [Room] = '" + textBox3.Text.ToString() +
                         "', [Capacity] = '" + textBox4.Text.ToString() +
@@ -100,7 +118,7 @@ namespace WindowsFormsApplication1
                     // memo part
                     string content = "Date" + " : " + date_str + " \n" +
                         "CourseName" + " : " + comboBox1.Text + " \n" +
-                        "TeacherName" + " : " + textBox1.Text + " \n" +
+                        "TeacherName" + " : " + comboBox2.Text + " \n" +
                         "ClassName" + " : " + textBox2.Text + " \n" +
                         "RoomName" + " : " + textBox3.Text + " \n" +
                         "Capacity" + " : " + textBox4.Text; 
@@ -127,7 +145,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        string sql_select = "Update [21 DEC 2012$] set Teachers = '" + textBox1.Text.ToString() +
+                        string sql_select = "Update [21 DEC 2012$] set Teachers = '" + comboBox2.Text.ToString() +
                                 "', [Classes] = '" + textBox2.Text.ToString() +
                                 "', [Room] = '" + textBox3.Text.ToString() +
                                 "', [Capacity] = '" + textBox4.Text.ToString() +
@@ -140,7 +158,7 @@ namespace WindowsFormsApplication1
                         // memo part
                         string content = "Date" + " : " + date_str + " \n" +
                         "CourseName" + " : " + comboBox1.Text + " \n" +
-                        "TeacherName" + " : " + textBox1.Text + " \n" +
+                        "TeacherName" + " : " + comboBox2.Text + " \n" +
                         "ClassName" + " : " + textBox2.Text + " \n" +
                         "RoomName" + " : " + textBox3.Text + " \n" +
                         "Capacity" + " : " + textBox4.Text;
@@ -167,7 +185,7 @@ namespace WindowsFormsApplication1
                     dt.Rows[0][4].ToString();
                 comboBox1.Text = dt.Rows[0][0].ToString();
                  * */
-                showclassroom();
+                //showclassroom();
             }
             catch
             {
@@ -250,7 +268,7 @@ namespace WindowsFormsApplication1
                     dt.Rows[0][4].ToString();
                 comboBox1.Text = dt.Rows[0][0].ToString();
 
-                textBox1.Text = dt.Rows[0][1].ToString();
+                comboBox2.Text = dt.Rows[0][1].ToString();
                 textBox2.Text = dt.Rows[0][2].ToString();
                 textBox3.Text = dt.Rows[0][3].ToString();
                 textBox4.Text = dt.Rows[0][4].ToString();
@@ -269,6 +287,25 @@ namespace WindowsFormsApplication1
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             showclassroom();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if (e.KeyChar >= '0' && e.KeyChar <= '9')
+            {
+                e.Handled = false;
+            }
         }
     }
 }

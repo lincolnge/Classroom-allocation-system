@@ -15,6 +15,10 @@ namespace WindowsFormsApplication1
         private string AmountNumber;
         private string Password;
 
+        public string date_str;
+        public string zone_name;
+        public string[] classroom_name = new string[50];
+
         public Zone(string textBox, string textBox2)
         {
             InitializeComponent();
@@ -38,26 +42,26 @@ namespace WindowsFormsApplication1
         private void Form2_Load(object sender, EventArgs e)
         {
             // output_txt.output_textfile();   // This is a sample output text file
+
+            string[] sArray;
+            sArray = "Mon 8:00-8:50".Split(new char[2] { ' ', '-' });
+            comboBox3.Text = sArray[0];
+            comboBox4.Text = sArray[1];
+            comboBox5.Text = sArray[2];
         }
 
         private void button6_Click(object sender, EventArgs e)  // zone_A
         {
-            string zone_name = "A";
-            string[] classroom_name;
-            classroom_name = new string[50];
+            zone_name = "A";
 
             classroom_name[0] = "!!!";
 
-            zone_A zoneA = new zone_A(zone_name, classroom_name);
-            this.Hide();
-            zoneA.ShowDialog();
+            zone_Button(); ;
         }
 
         private void button7_Click(object sender, EventArgs e)  // zone_B
         {
-            string zone_name = "B";
-            string[] classroom_name;
-            classroom_name = new string[50];
+            zone_name = "B";
 
             classroom_name[21] = "201";
             classroom_name[22] = "202";
@@ -66,16 +70,12 @@ namespace WindowsFormsApplication1
             classroom_name[32] = "302";
             classroom_name[33] = "303";
 
-            zone_A zoneA = new zone_A(zone_name, classroom_name);
-            this.Hide();
-            zoneA.ShowDialog();
+            zone_Button();
         }
 
         private void button8_Click(object sender, EventArgs e)  // zone_C
         {
-            string zone_name = "C";
-            string[] classroom_name;
-            classroom_name = new string[50];
+            zone_name = "C";
 
             classroom_name[1] = "121";
             classroom_name[2] = "122";
@@ -107,16 +107,12 @@ namespace WindowsFormsApplication1
             classroom_name[46] = "406";
             classroom_name[47] = "407";
 
-            zone_A zoneA = new zone_A(zone_name, classroom_name);
-            this.Hide();
-            zoneA.ShowDialog();
+            zone_Button();
         }
 
         private void button9_Click(object sender, EventArgs e)  // zone_D
         {
-            string zone_name = "D";
-            string[] classroom_name;
-            classroom_name = new string[50];
+            zone_name = "D";
 
             classroom_name[31] = "301";
             classroom_name[32] = "302";
@@ -130,16 +126,12 @@ namespace WindowsFormsApplication1
             classroom_name[47] = "407";
             classroom_name[48] = "408";
 
-            zone_A zoneA = new zone_A(zone_name, classroom_name);
-            this.Hide();
-            zoneA.ShowDialog();
+            zone_Button();
         }
 
         private void button10_Click(object sender, EventArgs e) // zone_E
         {
-            string zone_name = "E";
-            string[] classroom_name;
-            classroom_name = new string[50];
+            zone_name = "E";
 
             classroom_name[1] = "101";
             classroom_name[2] = "102";
@@ -153,30 +145,33 @@ namespace WindowsFormsApplication1
             classroom_name[31] = "301";
             classroom_name[41] = "401";
 
-            zone_A zoneA = new zone_A(zone_name, classroom_name);
-            this.Hide();
-            zoneA.ShowDialog();
+            zone_Button();
         }
 
         private void button11_Click(object sender, EventArgs e) // zone_F
         {
-            string zone_name = "F";
-            string[] classroom_name;
-            classroom_name = new string[50];
-
+            zone_name = "F";
+            
+            //classroom_name = new string[50];
             classroom_name[31] = "301";
             classroom_name[32] = "302";
             classroom_name[33] = "303";
 
-            zone_A zoneA = new zone_A(zone_name, classroom_name);
-            this.Hide();
-            zoneA.ShowDialog();
+            zone_Button();
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();   // Turn off the current form
             Application.ExitThread();   // exit all of the form
+        }
+
+        private void zone_Button()
+        {
+            date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            zone_A zoneA = new zone_A(zone_name, classroom_name, date_str);
+            this.Hide();
+            zoneA.ShowDialog();
         }
     }
 }

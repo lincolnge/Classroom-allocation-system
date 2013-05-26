@@ -16,26 +16,33 @@ namespace WindowsFormsApplication1
     {
         static public DataTable readExcel() // 读取excel
         {
-            string filename = "timetable.xls";
-            string strCon = " Provider = Microsoft.Jet.OLEDB.4.0 ; Data Source = " + filename + ";Extended Properties=Excel 8.0";
-            OleDbConnection conn = new OleDbConnection(strCon);
-            conn.Open();
-            //返回Excel的架构，包括各个sheet表的名称,类型，创建时间和修改时间等　
-            DataTable dtSheetName = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" });
-            //包含excel中表名的字符串数组
-            string[] strTableNames = new string[dtSheetName.Rows.Count];
-            for (int k = 0; k < dtSheetName.Rows.Count; k++)
+            try
             {
-                strTableNames[k] = dtSheetName.Rows[k]["TABLE_NAME"].ToString();
+                string filename = "timetable.xls";
+                string strCon = " Provider = Microsoft.Jet.OLEDB.4.0 ; Data Source = " + filename + ";Extended Properties=Excel 8.0";
+                OleDbConnection conn = new OleDbConnection(strCon);
+                conn.Open();
+                //返回Excel的架构，包括各个sheet表的名称,类型，创建时间和修改时间等　
+                DataTable dtSheetName = conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" });
+                //包含excel中表名的字符串数组
+                string[] strTableNames = new string[dtSheetName.Rows.Count];
+                for (int k = 0; k < dtSheetName.Rows.Count; k++)
+                {
+                    strTableNames[k] = dtSheetName.Rows[k]["TABLE_NAME"].ToString();
+                }
+                OleDbDataAdapter myCommand = null;
+                DataTable dt = new DataTable();
+                //从指定的表明查询数据,可先把所有表明列出来供用户选择
+                string strExcel = "select * from [" + strTableNames[0] + "]";
+                myCommand = new OleDbDataAdapter(strExcel, strCon);
+                myCommand.Fill(dt);
+                return dt;
             }
-            OleDbDataAdapter myCommand = null;
-            DataTable dt = new DataTable();
-            //从指定的表明查询数据,可先把所有表明列出来供用户选择
-            string strExcel = "select * from [" + strTableNames[0] + "]";
-            myCommand = new OleDbDataAdapter(strExcel, strCon);
-            myCommand.Fill(dt);
-
-            return dt;
+            catch
+            {
+                MessageBox.Show("You have not timetable.xls file, please create it.");
+                return null;
+            }
         }
 
         // 写入excel

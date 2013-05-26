@@ -14,15 +14,18 @@ namespace WindowsFormsApplication1
         private string zone_name_init;
         private string[] classroom_name_init;
 
-        public string date_str;
+        public string date_str_init;
+        public string sql_select;
+
         //private string label;
         private string AmountNumber;
         private string Password;
-        public zone_A(string zone_name, string[] classroom_name)
+        public zone_A(string zone_name, string[] classroom_name, string date_str)
         {
             InitializeComponent();
             zone_name_init = zone_name;
             classroom_name_init = classroom_name;
+            date_str_init = date_str;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -35,14 +38,19 @@ namespace WindowsFormsApplication1
         private void zone_A_Load(object sender, EventArgs e)
         {
             label1.Text = zone_name_init + "-Zone";
-            
+            /*
             string[] sArray;
             sArray = "Mon 8:00-8:50".Split(new char[2] { ' ', '-' });
             comboBox3.Text = sArray[0];
             comboBox4.Text = sArray[1];
             comboBox5.Text = sArray[2];
-
-            showclassroom();
+            */
+            string[] sArray;
+            sArray = date_str_init.Split(new char[2] { ' ', '-' });
+            comboBox3.Text = sArray[0];
+            comboBox4.Text = sArray[1];
+            comboBox5.Text = sArray[2];
+            //showclassroom();
         }
         
         private void label1_Click(object sender, EventArgs e)
@@ -58,11 +66,12 @@ namespace WindowsFormsApplication1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {            
             panel1.SendToBack();//置于底层
+            showclassroom(); // 没效果？？
         }
 
         void Buttons_Click(object sender, EventArgs e)
         {
-            date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
             this.Text = (sender as Button).Text;
             Classroom classroom = new Classroom(zone_name_init, classroom_name_init, this.Text, date_str);
             this.Hide();
@@ -89,11 +98,24 @@ namespace WindowsFormsApplication1
         {
             showclassroom();
         }
-
+        
         private void showclassroom()
         {
+            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            if (comboBox3.Text == "" || comboBox4.Text == "" || comboBox5.Text == "")
+                //    date_str = "Mon 8:00-8:50";
+                date_str = date_str_init;
+            label2.Text = date_str;
+            //MessageBox.Show(date_str);
+
+            //if(date_str == "Tue 10:00-10:50")
+            //    MessageBox.Show("hehe");
+            //sql_select = "select * from [21 DEC 2012$] where [Date] = '" + date_str + "'";
+
             try
             {
+                sql_select = "select * from [21 DEC 2012$]";
+                DataTable dt2 = update_file.readExcelSql(sql_select);
                 Button[] buttons = new Button[50];
                 // for (int i = 0; i < 5; i++) // 只产生5个button
                 for (int i = 0; i < classroom_name_init.Length; i++)
@@ -111,7 +133,20 @@ namespace WindowsFormsApplication1
 
                         //panel1.Controls.Add(buttons[i]);
                         buttons[i].BringToFront();//置于顶层
-                        buttons[i].Click += new EventHandler(Buttons_Click);                        
+                        buttons[i].Click += new EventHandler(Buttons_Click);
+
+                        for (int k = 0; k < dt2.Rows.Count; k++)
+                        {
+                            if (dt2.Rows[k][3].ToString() == buttons[i].Text && date_str.ToString() == dt2.Rows[k][5].ToString())
+                            {
+                                buttons[i].BackColor = Color.Red;
+                                break;
+                            }
+                            else
+                            {
+                                buttons[i].BackColor = Color.Gray;
+                            }
+                        }
                     }
                     else
                     {
@@ -123,6 +158,7 @@ namespace WindowsFormsApplication1
             catch
             {
                 //label3.Text = "There is no classroom!";
+                MessageBox.Show("error, can you check timatable.xls file or other errors");
             }
         }
 
