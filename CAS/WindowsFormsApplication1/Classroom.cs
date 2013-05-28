@@ -100,7 +100,9 @@ namespace WindowsFormsApplication1
         // This is a comfirm button, if label3 has no course, it means adding course, if labels3 has course, it means change course information
         private void button1_Click(object sender, EventArgs e)  // add or change
         {
-            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text; 
+            if (textBox4.Text.ToString() == "")
+                textBox4.Text = "0";
             if (label3.Text != "There is no classroom!" && label3.Text != "" && label3.Text != "label3")
             {
                 if (MessageBox.Show("Change Classroom Information...?", "Comfirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -302,7 +304,7 @@ namespace WindowsFormsApplication1
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
-            if (e.KeyChar >= '0' && e.KeyChar <= '9')
+            if (e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == 8)
             {
                 e.Handled = false;
             }

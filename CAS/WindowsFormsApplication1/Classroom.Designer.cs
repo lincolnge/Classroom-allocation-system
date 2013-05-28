@@ -169,15 +169,16 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(28, 112);
+            this.panel2.Location = new System.Drawing.Point(28, 114);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(313, 203);
+            this.panel2.Size = new System.Drawing.Size(313, 199);
             this.panel2.TabIndex = 18;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(12, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);

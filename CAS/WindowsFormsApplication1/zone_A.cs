@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace WindowsFormsApplication1
 {
@@ -16,6 +17,11 @@ namespace WindowsFormsApplication1
 
         public string date_str_init;
         public string sql_select;
+        private string color_Occupied = "Red";
+        private string color_Available = "Gray";
+        private string color_ForeColor_Occ = "Black";
+        private string color_ForeColor_Ava = "Black";
+        private Button[] buttons = new Button[50];
 
         //private string label;
         private string AmountNumber;
@@ -116,7 +122,6 @@ namespace WindowsFormsApplication1
             {
                 sql_select = "select * from [21 DEC 2012$]";
                 DataTable dt2 = update_file.readExcelSql(sql_select);
-                Button[] buttons = new Button[50];
                 // for (int i = 0; i < 5; i++) // 只产生5个button
                 for (int i = 0; i < classroom_name_init.Length; i++)
                 {
@@ -135,16 +140,21 @@ namespace WindowsFormsApplication1
                         buttons[i].BringToFront();//置于顶层
                         buttons[i].Click += new EventHandler(Buttons_Click);
 
+                        colorChoise();
                         for (int k = 0; k < dt2.Rows.Count; k++)
                         {
-                            if (dt2.Rows[k][3].ToString() == buttons[i].Text && date_str.ToString() == dt2.Rows[k][5].ToString())
+                            if (dt2.Rows[k][3].ToString() == buttons[i].Text && dt2.Rows[k][5].ToString() == date_str.ToString())
                             {
-                                buttons[i].BackColor = Color.Red;
+                                // buttons[i].BackColor = Color.Red;
+                                buttons[i].ForeColor = Color.FromName(color_ForeColor_Occ);
+                                buttons[i].BackColor = Color.FromName(color_Occupied);
                                 break;
                             }
                             else
                             {
-                                buttons[i].BackColor = Color.Gray;
+                                buttons[i].ForeColor = Color.FromName(color_ForeColor_Ava);
+                                buttons[i].BackColor = Color.FromName(color_Available);
+                                // buttons[i].BackColor = Color.Gray;
                             }
                         }
                     }
@@ -162,6 +172,27 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void changeColor()
+        {
+            string date_str = comboBox3.Text + " " + comboBox4.Text + "-" + comboBox5.Text;
+            sql_select = "select * from [21 DEC 2012$]";
+            DataTable dt2 = update_file.readExcelSql(sql_select);
+            try
+            {
+                for (int i = 0; i < classroom_name_init.Length; i++)
+                {
+                    if (classroom_name_init[i] != null)
+                    {
+                        buttons[i].Text = "hehe";
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("hehe");
+            }
+        }
+
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
             showclassroom();
@@ -170,6 +201,33 @@ namespace WindowsFormsApplication1
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             showclassroom();
+        }
+
+        private void Occupied_Click(object sender, EventArgs e)
+        {
+            ColorForm colorform = new ColorForm("Occupied");
+            colorform.ShowDialog();
+            changeColor();
+
+        }
+
+        private void Available_Click(object sender, EventArgs e)
+        {
+            ColorForm colorform = new ColorForm("Available");
+            colorform.ShowDialog();
+        }
+
+        private void colorChoise()
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load("color.xml");
+            XmlNodeList idList = xmlDoc.SelectNodes("//Product_color");
+            color_Occupied = idList[0].InnerText;
+            color_Available = idList[1].InnerText;
+
+            XmlNodeList idList2 = xmlDoc.SelectNodes("//Product_ForeColor");
+            color_ForeColor_Occ = idList2[0].InnerText;
+            color_ForeColor_Ava = idList2[1].InnerText;
         }
         
     }

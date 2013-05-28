@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Available = new System.Windows.Forms.Button();
+            this.Occupied = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +45,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.Available);
+            this.panel1.Controls.Add(this.Occupied);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBox5);
             this.panel1.Controls.Add(this.comboBox4);
@@ -54,9 +58,41 @@
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // Available
+            // 
+            this.Available.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Available.Location = new System.Drawing.Point(148, 345);
+            this.Available.Name = "Available";
+            this.Available.Size = new System.Drawing.Size(75, 23);
+            this.Available.TabIndex = 17;
+            this.Available.Text = "Available";
+            this.Available.UseVisualStyleBackColor = true;
+            this.Available.Click += new System.EventHandler(this.Available_Click);
+            // 
+            // Occupied
+            // 
+            this.Occupied.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Occupied.Location = new System.Drawing.Point(42, 345);
+            this.Occupied.Name = "Occupied";
+            this.Occupied.Size = new System.Drawing.Size(75, 23);
+            this.Occupied.TabIndex = 16;
+            this.Occupied.Text = "Occupied";
+            this.Occupied.UseVisualStyleBackColor = true;
+            this.Occupied.Click += new System.EventHandler(this.Occupied_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(442, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "label2";
+            // 
             // comboBox5
             // 
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "8:50",
@@ -81,6 +117,7 @@
             // comboBox4
             // 
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.Enabled = false;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "8:00",
@@ -105,6 +142,7 @@
             // comboBox3
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Enabled = false;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Mon",
@@ -155,15 +193,6 @@
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(442, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "label2";
-            // 
             // zone_A
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -195,6 +224,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Occupied;
+        private System.Windows.Forms.Button Available;
 
     }
 }
